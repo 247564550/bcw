@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address_insert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    tools:context="com.kswl.baimucai.activity.address.AddressInsertActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/address_contact_name"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="@string/input"
+                android:lines="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/text_dark_gray"
+                android:textColorHint="@color/text_light_gray"
+                android:textSize="15sp"/>
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_line"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/address_contact_phone"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_contact_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="@string/input"
+                android:inputType="phone"
+                android:lines="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/text_dark_gray"
+                android:textColorHint="@color/text_light_gray"
+                android:textSize="15sp"/>
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_line"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/address_area"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="right"
+                android:hint="@string/choose"
+                android:onClick="onClick"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/text_dark_gray"
+                android:textColorHint="@color/text_light_gray"
+                android:textSize="15sp"/>
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_line"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/address_desc"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ellipsize="start"
+                android:gravity="right"
+                android:hint="@string/input"
+                android:lines="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:singleLine="true"
+                android:textColor="@color/text_dark_gray"
+                android:textColorHint="@color/text_light_gray"
+                android:textSize="15sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/orange"
+        android:onClick="onClick"
+        android:text="@string/address_insert"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/btn_text_size"/>
+
+</RelativeLayout>

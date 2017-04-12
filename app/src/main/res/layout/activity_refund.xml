@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_refund"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kswl.baimucai.activity.order.RefundActivity">
+
+    <EditText
+        android:id="@+id/et_reason"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/white"
+        android:gravity="top|left"
+        android:hint="@string/refund_edit_hint"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/btn_apply"
+        style="@style/btn_solid_style"
+        android:layout_below="@id/et_reason"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:onClick="onClick"
+        android:text="@string/refund_apply"/>
+
+</RelativeLayout>

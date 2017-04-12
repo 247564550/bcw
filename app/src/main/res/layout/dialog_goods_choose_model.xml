@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="1500dp"
+        android:layout_height="1dp"
+        android:focusableInTouchMode="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/goods_dialog_padding">
+
+        <TextView
+            android:id="@+id/tv_choose_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:text="@string/goods_choose"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_choose_title"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="@string/goods_stock_dialog"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/goods_dialog_padding"
+            android:paddingRight="@dimen/goods_dialog_padding">
+
+            <LinearLayout
+                android:id="@+id/ll_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/goods_buy_count"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_minus"
+                    android:layout_width="@dimen/goods_edittext_height"
+                    android:layout_height="@dimen/goods_edittext_height"
+                    android:background="#EEEEEE"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/black_minus_icon"/>
+
+                <EditText
+                    android:id="@+id/et_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/goods_edittext_height"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#EEEEEE"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:maxLength="9"
+                    android:minWidth="45dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="1"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="@dimen/goods_edittext_height"
+                    android:layout_height="@dimen/goods_edittext_height"
+                    android:background="#EEEEEE"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/black_plus_icon"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_btn_height"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_dialog_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/yellow"
+            android:text="@string/goods_add_shopping"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_dialog_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:text="@string/goods_buy_now"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>

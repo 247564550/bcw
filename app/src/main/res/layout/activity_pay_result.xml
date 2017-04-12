@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.kswl.baimucai.activity.order.PayResultActivity">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/pay_success_icon"/>
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/pay_success"
+        android:textColor="@color/text_black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_state_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_success_hint"
+        android:textColor="@color/text_dark_gray"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btn_complete"
+        style="@style/btn_solid_style"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:onClick="onClick"
+        android:text="@string/complete"/>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xml_white_gray_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/xml_rectangle_gray_line_bg"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="中铁十八局中铁十八局中铁十八局中铁十八局中铁十八局中铁十八局中铁十八局中铁十八局"
+        android:textColor="@color/text_black"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:paddingBottom="5dp"
+        android:text="衡水建材"
+        android:textColor="@color/text_dark_gray"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_shop"
+        android:layout_toRightOf="@id/iv_icon"
+        android:paddingBottom="5dp"
+        android:text="¥ 500.00"
+        android:textColor="@color/text_orange"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_icon"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:text="200条评论"
+        android:textColor="@color/text_dark_gray"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:background="@color/gray_line"/>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.0"
+    defaultConfig {
+        applicationId "com.kswl.baimucai"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //  如果项目中有用到.so文件，则只需要把so文件放到libs文件夹里的对应cpu文件夹里，并且打开下面这段代码注释即可
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //导入图片加载框架，必须包含v4包
+    //导入独立的图片处理库,对图片进行裁剪、模糊、滤镜等处理：
+    //导入http请求包okHttp
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.android.support:support-v4:22.0.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.daimajia.swipelayout:library:1.2.0@aar'
+    compile project(':easeui')
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kswl.baimucai.view.PullToRefreshView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    tools:context="com.kswl.baimucai.activity.event.EventListActivity">
+
+    <GridView
+        android:id="@+id/gv_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:horizontalSpacing="1dp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp"/>
+
+</com.kswl.baimucai.view.PullToRefreshView>

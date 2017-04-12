@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    tools:context="com.kswl.baimucai.activity.base.BaseActivity">
+
+    <include
+        layout="@layout/v_base_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"/>
+
+    <FrameLayout
+        android:id="@+id/fl_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:orientation="vertical">
+    </FrameLayout>
+
+</RelativeLayout>

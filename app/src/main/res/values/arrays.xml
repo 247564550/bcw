@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_sort">
+        <item>首页</item>
+        <item>分类</item>
+        <item>招标大厅</item>
+        <item>购物车</item>
+        <item>我的</item>
+    </string-array>
+    <string-array name="about_content">
+        <item>网站介绍</item>
+        <item>公司介绍</item>
+        <item>法律声明</item>
+    </string-array>
+    <string-array name="vip_content">
+        <item>联系平台</item>
+        <item>问题解答</item>
+    </string-array>
+    <string-array name="tender_filter">
+        <item>分类</item>
+        <item>状态</item>
+        <item>省份</item>
+        <item>时间</item>
+    </string-array>
+    <string-array name="tender_status_value">
+        <item>未开始</item>
+        <item>招标中</item>
+        <item>已结束</item>
+    </string-array>
+    <string-array name="tender_status_key">
+        <item>00700003</item>
+        <item>00700001</item>
+        <item>00700002</item>
+    </string-array>
+    <string-array name="tender_date">
+        <item>开始时间</item>
+        <item>结束时间</item>
+    </string-array>
+</resources>

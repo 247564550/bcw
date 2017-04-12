@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    tools:context="com.kswl.baimucai.activity.account.AccountShowActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_bg"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_white_gray_selector"
+            android:onClick="onClick"
+            android:padding="12dp">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_portrait"/>
+
+            <ImageView
+                android:id="@+id/iv_portrait"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/default_portrait"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_nickname"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_nickname"/>
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                style="@style/account_item_right_text_style"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_email"/>
+
+            <TextView
+                android:id="@+id/tv_email"
+                style="@style/account_item_right_text_style"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_company"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_company"/>
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/account_item_right_text_style"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_sex"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_sex"/>
+
+            <TextView
+                android:id="@+id/tv_sex"
+                style="@style/account_item_right_text_style"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_area"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_area"/>
+
+            <TextView
+                android:id="@+id/tv_area"
+                style="@style/account_item_right_text_style"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_qq"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_qq"/>
+
+            <TextView
+                android:id="@+id/tv_qq"
+                style="@style/account_item_right_text_style"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_address"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_address"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="@string/update"
+                android:textColor="@color/text_orange"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray_bg"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            style="@style/account_item_parent_style">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_phone"/>
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/account_item_right_text_style"/>
+        </RelativeLayout>
+
+        <View style="@style/account_item_line_style"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_pwd"
+            style="@style/account_item_parent_style"
+            android:onClick="onClick">
+
+            <TextView
+                style="@style/account_item_left_text_style"
+                android:text="@string/account_pwd"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="@string/update"
+                android:textColor="@color/text_orange"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

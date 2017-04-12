@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shop_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    tools:context="com.kswl.baimucai.activity.shop.ShopDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_line"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_sort"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/xml_white_gray_selector"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/shop_sort_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_sort"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_event"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/xml_white_gray_selector"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/shop_event_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_event"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_contact"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/xml_white_gray_selector"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/shop_contact_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_contact"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/ll_bottom"
+        android:background="@color/gray_line"/>
+
+    <com.kswl.baimucai.view.PullToRefreshView
+        android:id="@+id/v_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/v_line"
+        android:background="@color/gray_bg"
+        android:orientation="vertical">
+
+        <com.kswl.baimucai.view.ObservableScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true">
+
+                <View
+                    android:id="@+id/v_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_follow_count"
+                    android:layout_alignTop="@id/v_top"
+                    android:scaleType="fitCenter"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_follow_count"
+                    android:layout_alignTop="@id/v_top"
+                    android:background="@drawable/own_bg_icon"/>
+
+                <com.kswl.baimucai.view.CircleImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    app:border_color="@color/transparent"
+                    app:border_width="1px"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/shop_name_icon"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="@string/default_text"
+                    android:textColor="@color/text_white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_name"
+                    android:layout_alignRight="@id/iv_icon"
+                    android:layout_marginBottom="-8dp"
+                    android:background="@drawable/shop_vip_bg_icon"
+                    android:drawableLeft="@mipmap/v_orange_icon"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_orange"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_follow_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="50dp"
+                    android:text="@string/shop_follow_count"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp"/>
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_below="@id/tv_follow_count"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="-35dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_coupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <com.kswl.baimucai.view.CustomGridView
+                    android:id="@+id/gv_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hsv_coupon"
+                    android:horizontalSpacing="1dp"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1dp"/>
+            </RelativeLayout>
+        </com.kswl.baimucai.view.ObservableScrollView>
+    </com.kswl.baimucai.view.PullToRefreshView>
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/xml_rectangle_gray_line_bg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:padding="11dp"
+            android:src="@drawable/shop_back_white_icon"/>
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/follow"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

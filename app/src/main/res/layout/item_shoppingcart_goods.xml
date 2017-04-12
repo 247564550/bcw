@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xml_white_gray_selector"
+    android:descendantFocusability="beforeDescendants">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/text_white"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="12dp">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:button="@drawable/xml_oval_checkbox_bg"
+                android:gravity="center_vertical"
+                android:padding="5dp"/>
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/checkBox"
+                android:background="@drawable/xml_rectangle_gray_line_bg"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_icon"
+                android:ellipsize="end"
+                android:lines="2"
+                android:text="桥梁底座"
+                android:textColor="@color/text_black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_toRightOf="@id/iv_icon"
+                android:background="@color/gray_line"
+                android:padding="2dp"
+                android:text="@string/shopping_no_stock"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_icon"
+                android:layout_toRightOf="@id/iv_icon"
+                android:text="¥ 750.00"
+                android:textColor="@color/text_orange"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_icon"
+                android:layout_alignParentRight="true"
+                android:background="@color/gray_line"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <ImageButton
+                    android:id="@+id/btn_minus"
+                    android:layout_width="@dimen/goods_edittext_height"
+                    android:layout_height="@dimen/goods_edittext_height"
+                    android:background="@color/white"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/black_minus_icon"/>
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="@dimen/goods_edittext_height"
+                    android:layout_height="@dimen/goods_edittext_height"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:maxLength="9"
+                    android:text="1"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="@dimen/goods_edittext_height"
+                    android:layout_height="@dimen/goods_edittext_height"
+                    android:background="@color/white"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/black_plus_icon"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.daimajia.swipe.SwipeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/swipeLayout"
+        android:background="@color/gray_line"/>
+</RelativeLayout>
+

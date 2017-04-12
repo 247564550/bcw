@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xml_white_gray_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.kswl.baimucai.view.CircleImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/system_msg_icon"
+        app:border_color="@color/white"
+        app:border_width="1px"/>
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp"
+        android:text="2015-01-01"
+        android:textColor="@color/list_itease_secondary_color"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_time"
+        android:layout_toLeftOf="@id/tv_time"
+        android:layout_toRightOf="@id/iv_icon"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingRight="10dp"
+        android:text="系统消息"
+        android:textColor="@color/text_black"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/iv_state"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/iv_icon"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/iv_icon"
+        android:src="@drawable/ease_msg_state_fail_resend"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_state"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingBottom="6dp"
+        android:text="双十一特惠双十一特惠双十一特惠双十一特惠双十一特惠"
+        android:textColor="@color/text_dark_gray"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_icon"
+        android:layout_marginBottom="-25dp"
+        android:layout_marginLeft="-25dp"
+        android:layout_toRightOf="@id/iv_icon"
+        android:background="@drawable/ease_unread_count_bg"
+        android:gravity="center"
+        android:minWidth="16dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="10"
+        android:textColor="@color/text_white"
+        android:textSize="12sp"/>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/iv_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray_line"/>
+
+    <View
+        android:id="@+id/v_system_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/iv_icon"
+        android:background="@color/gray_bg"
+        android:visibility="gone"/>
+
+</RelativeLayout>

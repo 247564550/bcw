@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kswl.baimucai.view.PullToRefreshView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    tools:context="com.kswl.baimucai.activity.history.BrowsingHistoryActivity">
+
+    <ListView
+        android:id="@+id/lv_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none"/>
+
+</com.kswl.baimucai.view.PullToRefreshView>

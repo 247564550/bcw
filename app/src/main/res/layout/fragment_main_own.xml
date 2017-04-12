@@ -1,0 +1,495 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    tools:context="com.kswl.baimucai.activity.main.MainOwnFragment">
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/orange_round_corner_hollow_button_icon"
+        android:text="@string/own_logout"
+        android:textColor="@color/text_orange"
+        android:textSize="@dimen/btn_text_size"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_logout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_bg">
+
+                <View
+                    android:id="@+id/v_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_progress"
+                    android:layout_alignTop="@id/v_top"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/login_qq_icon"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_progress"
+                    android:layout_alignTop="@id/v_top"
+                    android:background="@drawable/own_bg_icon"/>
+
+                <ImageView
+                    android:id="@+id/iv_portrait"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/login_qq_icon"/>
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="79dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/iv_portrait"
+                    android:background="@drawable/own_account_bg_icon"
+                    android:gravity="center"
+                    android:text="@string/own_account"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_portrait"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:text="@string/default_text"
+                    android:textColor="@color/text_white"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_nickname"
+                    android:layout_alignRight="@id/iv_portrait"
+                    android:layout_marginBottom="-8dp"
+                    android:background="@drawable/shop_vip_bg_icon"
+                    android:drawableLeft="@mipmap/v_orange_icon"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="3"
+                    android:textColor="@color/text_orange"
+                    android:textSize="12sp"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_integral"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="6dp"
+                    android:layout_below="@id/tv_nickname"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:progress="20"
+                    android:progressDrawable="@drawable/xml_own_progress_drawable"/>
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pb_integral"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="40dp"
+                    android:text="200/5000"
+                    android:textColor="@color/text_white"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/tv_progress"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="-30dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_order_payment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/xml_white_gray_selector"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_order_payment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="@string/own_order_payment"
+                            android:textColor="@color/text_black"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/tv_order_payment"
+                            android:padding="5dp"
+                            android:src="@drawable/order_payment_icon"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_order_send"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/xml_white_gray_selector"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_order_send"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="@string/own_order_send"
+                            android:textColor="@color/text_black"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/tv_order_send"
+                            android:padding="5dp"
+                            android:src="@drawable/order_send_icon"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_order_receive"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/xml_white_gray_selector"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_order_receive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="@string/own_order_receive"
+                            android:textColor="@color/text_black"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/tv_order_receive"
+                            android:padding="5dp"
+                            android:src="@drawable/order_receive_icon"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_order_refund"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/xml_white_gray_selector"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_order_refund"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="@string/own_order_refund"
+                            android:textColor="@color/text_black"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/tv_order_refund"
+                            android:padding="5dp"
+                            android:src="@drawable/order_refund_icon"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_order_all"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/xml_white_gray_selector"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_order_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:lines="1"
+                            android:text="@string/own_order_all"
+                            android:textColor="@color/text_black"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/tv_order_all"
+                            android:padding="5dp"
+                            android:src="@drawable/order_payment_icon"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_msg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_msg_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_msg"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/own_item_height"
+                android:background="@color/gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_collect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_collect_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_collect"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/own_item_height"
+                android:background="@color/gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_vip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_vip_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_vip"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/own_item_height"
+                android:background="@color/gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_about"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_about_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_about"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/own_item_height"
+                android:background="@color/gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_feedback_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_feedback"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/own_item_height"
+                android:background="@color/gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_browsing"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_browsing_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_browsing"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/own_item_height"
+                android:background="@color/gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_coupon_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_coupon"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/own_item_height"
+                android:background="@color/gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/own_item_height"
+                android:background="@drawable/xml_white_gray_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/own_item_height"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:src="@drawable/own_share_icon"/>
+
+                <TextView
+                    style="@style/own_item_text_style"
+                    android:text="@string/own_share"/>
+
+                <ImageView style="@style/arrow_gray_right_style"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/user_padding"
+    tools:context="com.kswl.baimucai.activity.user.UserInputPhoneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_edittext_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/user_padding"
+            android:paddingRight="@dimen/user_padding">
+
+            <TextView style="@style/user_star_style"/>
+
+            <EditText
+                android:id="@+id/et_pwd"
+                style="@style/user_edittext_style"
+                android:hint="@string/password_hint"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gray_horizontal_line_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_edittext_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/user_padding"
+            android:paddingRight="@dimen/user_padding">
+
+            <TextView style="@style/user_star_style"/>
+
+            <EditText
+                android:id="@+id/et_pwd_repeat"
+                style="@style/user_edittext_style"
+                android:hint="@string/password_repeat_hint"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_protocol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <CheckBox
+            android:id="@+id/cb_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/xml_register_checkbox_bg"
+            android:checked="true"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/agree_protocol"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/btn_solid_style"
+        android:layout_marginLeft="@dimen/user_padding"
+        android:layout_marginRight="@dimen/user_padding"
+        android:layout_marginTop="60dp"
+        android:text="@string/submit"/>
+
+</LinearLayout>

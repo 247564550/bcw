@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_bg"
+    android:paddingLeft="@dimen/classify_spacing"
+    android:paddingRight="@dimen/classify_spacing"
+    android:paddingTop="@dimen/classify_spacing">
+
+    <com.kswl.baimucai.view.ProportionImageView
+        android:id="@+id/iv_child"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:proportion_height="1"
+        app:proportion_width="2"/>
+
+</RelativeLayout>
+
+

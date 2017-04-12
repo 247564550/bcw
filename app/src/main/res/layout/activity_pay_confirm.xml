@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    tools:context="com.kswl.baimucai.activity.order.PayConfirmActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:onClick="onClick"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_coupon"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:lines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/pay_unuse"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="15sp"/>
+
+        <ImageView style="@style/arrow_gray_right_style"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="12dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:text="@string/pay_coupon"/>
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:layout_width="match_parent"
+                android:layout_span="2"
+                android:gravity="right"
+                android:text="- ¥ 0"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:text="@string/pay_freight"/>
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:layout_width="match_parent"
+                android:layout_span="2"
+                android:gravity="right"
+                android:text="+ ¥ 10"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:text="@string/pay_goods_amount"/>
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:text="¥ 800"
+                android:textColor="@color/text_orange"/>
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:gravity="right"
+                android:paddingLeft="8dp"
+                android:text="@string/pay_old_amount"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:text="@string/pay_real_amount"/>
+
+            <TextView
+                style="@style/pay_confirm_text_style"
+                android:layout_width="match_parent"
+                android:layout_span="2"
+                android:gravity="right"
+                android:text=" ¥ 810"
+                android:textColor="@color/text_orange"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="13dp"
+        android:text="@string/pay_mode"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_line"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableLeft="@mipmap/pay_alipay_icon"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/xml_oval_checkbox_bg"
+            android:padding="13dp"
+            android:text="@string/pay_alipay"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray_line"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableLeft="@mipmap/pay_unionpayicon"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/xml_oval_checkbox_bg"
+            android:padding="13dp"
+            android:text="@string/pay_unionpay"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray_line"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableLeft="@mipmap/pay_wechat_icon"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/xml_oval_checkbox_bg"
+            android:padding="13dp"
+            android:text="@string/pay_wechat"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_pay"
+        style="@style/btn_solid_style"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:onClick="onClick"
+        android:text="@string/pay_once"/>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.kswl.baimucai.activity.search.SearchActivity">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/v_search_title"/>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/orange_round_corner_hollow_button_icon"
+        android:onClick="onClick"
+        android:text="@string/search_clear_history"
+        android:textColor="@color/text_orange"
+        android:textSize="@dimen/btn_text_size"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_clear"
+        android:layout_below="@id/rl_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/search_hot"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"/>
+
+            <com.kswl.baimucai.view.FlowViewGroup
+                android:id="@+id/fvg_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/search_item_margin"
+                android:paddingRight="@dimen/search_item_margin">
+            </com.kswl.baimucai.view.FlowViewGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="@string/search_history"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"/>
+
+            <com.kswl.baimucai.view.FlowViewGroup
+                android:id="@+id/fvg_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/search_item_margin"
+                android:paddingRight="@dimen/search_item_margin">
+            </com.kswl.baimucai.view.FlowViewGroup>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
